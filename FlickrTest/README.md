@@ -1,20 +1,20 @@
-#Setup and Run
+**Setup and Run**
 
 Download or clone FlickrTest and import in the Android Studio and run to device.
 
  1. Search any images and all images will be displayed in a grid with 3 columns.
 
-#About the Test
+**About the Test**
 
 I have written a basic structure of MVVM. In this example, I've created a basic core framework (can be extended based on requirement.), Network Layer and one custom component for pagination. 
 
-##Core Framework
+**Core Framework**
 
   * DataActivity 
   * DataView
   * DataViewModel
   
-##Network
+**Network**
 
    * ApiRepository
    * Factory
@@ -26,16 +26,16 @@ I have written a basic structure of MVVM. In this example, I've created a basic 
    * For the specific errors I have created RestException which has status, code and message. 
       I have displayed error messages whatever I am receiving from the backend api because I don't have customer friendly messages mapping with these error messages. 
   
-##Layout and dispaly images
+**Layout and dispaly images**
 
  I've used picasso to handle image lazy loading and have created custom recyclerview to handle pagination.
  
  
-##Test cases
+**Test cases**
 
- I've written two test cases for the viewmodel. 
+I've written two test cases for the viewmodel. 
  
-## Better solutions:
+**Improvements:**
 
  I have displayed same loading for the search and pagination which could be separated.
  I haven't covered much test cases but requirement was for two so I have taken lightly
