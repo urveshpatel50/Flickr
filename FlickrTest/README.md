@@ -2,7 +2,7 @@
 
 Download or clone FlickrTest and import in the Android Studio and run to device.
 
- 1. Search any images and all images will be displayed in a grid with 3 columns.
+ * Search any images and all images will be displayed in a grid with 3 columns.
 
 **About the Test**
 
