@@ -33,11 +33,10 @@ I have written a basic structure of MVVM. In this example, I've created a basic 
  
 **Test cases**
 
-I've written two test cases for the viewmodel. 
+I've written quickly two test cases for the viewmodel. 
  
 **Improvements:**
 
  I have displayed same loading for the search and pagination which could be separated.
- I haven't covered much test cases but requirement was for two so I have taken lightly
  If I would have a mapping for error messages then I would have covered more error scenarios rather than displaying backend error messages.
  API base url and api_key should be move into .properties file
