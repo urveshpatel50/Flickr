@@ -29,6 +29,8 @@ class SearchPhotosViewModel : DataViewModel<ArrayList<Photo>>() {
 
         if (searchText != this.searchText) {
             this.searchText = searchText
+            nextPage = 1
+            currentPage = 0
             searchPhotos()
         }
     }
