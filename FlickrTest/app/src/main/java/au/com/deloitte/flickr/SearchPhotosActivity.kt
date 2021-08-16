@@ -60,7 +60,7 @@ class SearchPhotosActivity :
 
         with(photosAdapter) {
 
-            if (viewModel.nextPage == 1) {
+            if (viewModel.currentPage <= 1) {
                 photos.clear()
             }
 
