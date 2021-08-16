@@ -17,13 +17,13 @@ class SearchPhotosViewModel : DataViewModel<ArrayList<Photo>>() {
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     fun mapList(photo: List<PhotoMetaData>?): List<Photo> =
-            photo?.map {
-                Photo(
-                        it.id,
-                        "https://farm${it.farm}.static.flickr.com/${it.server}/${it.id}_${it.secret}.jpg",
-                        it.title
-                )
-            } ?: emptyList()
+        photo?.map {
+            Photo(
+                it.id,
+                "https://farm${it.farm}.static.flickr.com/${it.server}/${it.id}_${it.secret}.jpg",
+                it.title
+            )
+        } ?: emptyList()
 
     fun search(searchText: String) {
 
@@ -49,8 +49,13 @@ class SearchPhotosViewModel : DataViewModel<ArrayList<Photo>>() {
                 if (searchText.isNotBlank()) {
                     val result = repository.searchPhotos(searchText, nextPage)
                     currentPage = result?.data?.photos?.page ?: 0
+
                     nextPage = currentPage + 1
                     photosList = mapList(result?.data?.photos?.photo)
+
+                } else {
+                    nextPage = 1
+                    currentPage = 0
                 }
 
                 success(ArrayList(photosList))
@@ -60,10 +65,4 @@ class SearchPhotosViewModel : DataViewModel<ArrayList<Photo>>() {
             }
         }
     }
-
-    override fun onData(data: ArrayList<Photo>) {
-        super.onData(data)
-    }
-
-
 }
