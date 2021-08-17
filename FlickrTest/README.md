@@ -24,7 +24,7 @@ I have written a basic structure of MVVM. In this example, I've created a basic 
    
    * Handle IOException as Networkexception and others as a GenericException
    * For the specific errors I have created RestException which has status, code and message. 
-      I have displayed error messages whatever I am receiving from the backend api because I don't have customer friendly messages mapping with these error messages. 
+      I have displayed error messages whatever I am receiving from the backend api as I don't have customer friendly messages mapping with these error messages. 
   
 **Layout and dispaly images**
 
